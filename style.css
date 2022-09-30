@@ -1,0 +1,31 @@
+* {
+    font-family: monospace;
+        font-weight: 100;
+        font-size: 20px;
+}
+
+body {
+    padding: 25px;
+    background-color: #ff9e93;
+}
+
+div {
+    background-color: #FA8072;
+    border-style: double;
+    border-radius: 30px;
+    margin: auto;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    box-shadow: 20px 20px 20px #000;
+}
+
+.input {
+    width: 69vh;
+    border-radius: 17px;
+}
+
+.boton:hover {
+    color: #fff;
+    background-color: #000;
+    transition: 0.5s;
+}
