@@ -19,8 +19,8 @@ div {
     box-shadow: 20px 20px 20px #000;
 }
 
-.input {
-    width: 62vh;
+.input, .input2 {
+    width: 33vh;
     border-radius: 17px;
 }
 

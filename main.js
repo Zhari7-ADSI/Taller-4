@@ -3,24 +3,33 @@ addEventListener("DOMContentLoaded", (e) => {
     formulario.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let trabajadores = document.getElementById("numero1").value;
+        let sig = 1;
+        const pi = 3.14;
 
-        for (i = 1; i <= trabajadores; i++) {
-            let aumento = parseInt(prompt('cuantos años lleva trabajando en la empresa?'));
+        let angulo = document.getElementById("numero1").value;
+        let radian = document.getElementById("numero2").value;
 
-            if (1 <= aumento && aumento <= 5) {
-                alert('su aumento es de 100 pesos');
-                }
-                else if (5 < aumento && aumento <= 10) {
-                    alert('su aumento es de 250 pesos');
-                }
-                else if (10 < aumento && aumento <= 20) {
-                    alert('su aumento es de 400 pesos');
-                }
-                else{
-                    alert('su aumento es de 550 pesos');
-                }
-            
+        let x = radian * (180 / pi);
+        let sen = x;
+
+        for (i = 3; i <= angulo + 1; i++) {
+
+            let a = 1;
+            let b = 1;
+
+            while (a <= i) {
+                b = b * a;
+                a = a + 1;
+            }
+            if (sig % 2 == 1) {
+                sen = sen - ((x * i) / b);
+            }
+            else {
+                sen = sen + ((x * i) / b);
+            }
+            sig += 1;
+
         }
+        document.getElementById('resul').innerHTML = 'el seno de ' + x + ' es ' + sen;
     })
-    })
+})
