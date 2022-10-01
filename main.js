@@ -3,33 +3,19 @@ addEventListener("DOMContentLoaded", (e) => {
     formulario.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let sig = 1;
-        const pi = 3.14;
+        let cant = document.getElementById("numero1").value;
 
-        let angulo = document.getElementById("numero1").value;
-        let radian = document.getElementById("numero2").value;
+        for (i=1; i<=cant; i++){
 
-        let x = radian * (180 / pi);
-        let sen = x;
+            let num1 = parseInt(prompt(i+'-'+cant+'\n Ingrese el primer número:'));
+            let num2 = parseInt(prompt('Ingrese el segundo número:'));
 
-        for (i = 3; i <= angulo + 1; i++) {
-
-            let a = 1;
-            let b = 1;
-
-            while (a <= i) {
-                b = b * a;
-                a = a + 1;
-            }
-            if (sig % 2 == 1) {
-                sen = sen - ((x * i) / b);
-            }
-            else {
-                sen = sen + ((x * i) / b);
-            }
-            sig += 1;
-
+            let sum = num1 + num2;
+            let rest = num1-num2;
+            let mult = num1 * num2;
+            let div = num1 / num2;
+            
+            alert('suma: '+sum+ '\n resta: '+rest+ '\n multiplicación: '+mult+'\n división:'+div)
         }
-        document.getElementById('resul').innerHTML = 'el seno de ' + x + ' es ' + sen;
     })
 })
